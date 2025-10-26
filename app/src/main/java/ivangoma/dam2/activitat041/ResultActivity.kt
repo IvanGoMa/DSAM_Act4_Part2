@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import ivangoma.dam2.activitat041.CalculatorActivity.Companion.IMC_KEY
@@ -34,18 +35,25 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun initUI(result: Double) {
+        tvValor.text=result.toString()
         when(result){
             in 0.00..18.50 -> {
                 tvEstat.text = getString(R.string.title_low)
+                tvEstat.setTextColor(ContextCompat.getColor(this,R.color.dolent))
                 tvDesc.text = getString(R.string.desc_low)
+                tvDesc.setTextColor(ContextCompat.getColor(this,R.color.dolent))
             }
             in 18.51..29.99 -> {
                 tvEstat.text = getString(R.string.title_medium)
+                tvEstat.setTextColor(ContextCompat.getColor(this,R.color.normal))
                 tvDesc.text = getString(R.string.desc_medium)
+                tvDesc.setTextColor(ContextCompat.getColor(this,R.color.normal))
             }
             in 30.00..99.00 -> {
                 tvEstat.text = getString(R.string.title_high)
+                tvEstat.setTextColor(ContextCompat.getColor(this,R.color.dolent))
                 tvDesc.text = getString(R.string.desc_high)
+                tvDesc.setTextColor(ContextCompat.getColor(this,R.color.dolent))
             }
             else -> {
                 tvEstat.text = getString(R.string.error)

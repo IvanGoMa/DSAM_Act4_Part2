@@ -39,7 +39,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_marginHorizontal="20dp">
+            android:layout_marginHorizontal="30dp">
 
             <TextView
                 android:id="@+id/estat"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="70sp"
                 android:textStyle="bold"
-                android:text="@string/resultatValor"
+                android:text=""
                 android:textColor="@color/white"
                 android:layout_marginVertical="80dp"/>
 

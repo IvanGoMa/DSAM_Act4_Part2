@@ -90,7 +90,7 @@ class CalculatorActivity: AppCompatActivity()  {
         }
         btnCalcular.setOnClickListener {
             val resultado = calcularIMC()
-            //navigateToResult(resultado)
+            navigateToResult(resultado)
         }
 
     }
