@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Activitat04.1</string>
+    <string name="home">Home</string>
+    <string name="dona">Dona</string>
+    <string name="title">Calculadora IMC</string>
+    <string name="alcada">Alçada</string>
+    <string name="pes">Pes</string>
+    <string name="edat">Edat</string>
+    <string name="calcular">CALCULAR</string>
+
+</resources>
