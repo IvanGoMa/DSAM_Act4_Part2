@@ -4,5 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="card">#2E2E2E</color>
     <color name="button">#673AB7</color>
-
+    <color name="fondo">#150B24</color>
+    <color name="normal">#4CAF50</color>
+    <color name="regular">#FFC107</color>
+    <color name="dolent">#F44336</color>
 </resources>

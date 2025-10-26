@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/fondo"
     android:padding="10dp"
-    tools:context=".MenuActivity">
+    tools:context="CalculatorActivity">
 
     <TextView
         android:id="@+id/tvHeader"
@@ -29,7 +29,7 @@
         android:id="@+id/CVMale"
         android:layout_width="0dp"
         android:layout_height="170dp"
-
+        app:cardBackgroundColor="@color/button"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:paddingBottom="20sp"
@@ -41,19 +41,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/card"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="70dp"
                 android:layout_height="100dp"
                 android:contentDescription="@string/home"
-                android:src="@drawable/ic_home">
+                android:src="@drawable/ic_home"
+                app:tint="@color/white">
 
             </ImageView>
 
             <TextView
+                android:id="@+id/tvHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -69,7 +70,7 @@
         android:id="@+id/CVFemale"
         android:layout_width="0dp"
         android:layout_height="170dp"
-
+        app:cardBackgroundColor="@color/card"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
@@ -80,19 +81,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/card"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:contentDescription="@string/home"
+                android:contentDescription="@string/dona"
+                app:tint="@color/white"
                 android:src="@drawable/ic_dona">
 
             </ImageView>
 
             <TextView
+                android:id="@+id/tvDona"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -134,11 +136,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvAlcada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="top"
                 android:orientation="vertical"
-                android:text="183cm"
+                android:text="120cm"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -146,7 +149,11 @@
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="120"
+                android:valueTo="200"
+            />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -183,11 +190,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvPes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="top"
                 android:orientation="vertical"
-                android:text="183cm"
+                android:text="60"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -198,16 +206,21 @@
                 android:orientation="horizontal">
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnMenosPeso"
-                    android:contentDescription="botón menos peso"
+                    android:contentDescription="Botón menos peso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/button"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="@color/white"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnMasPeso"
                     android:backgroundTint="@color/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Botón más peso"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </LinearLayout>
 
@@ -242,11 +255,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvEdat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="top"
                 android:orientation="vertical"
-                android:text="183cm"
+                android:text="30"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -256,16 +270,22 @@
                 android:gravity="center"
                 android:orientation="horizontal">
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/btnMenosPeso"
+                    android:id="@+id/btnMenosEdad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/button"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Botón menos edad"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="@color/white"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/btnMasPeso"
+                    android:id="@+id/btnMasEdad"
                     android:backgroundTint="@color/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Botón más edad"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </LinearLayout>
 
@@ -273,12 +293,14 @@
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="0"
-        android:layout_height="60"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/calcular"
         android:layout_marginHorizontal="20dp"
+        android:textSize="20sp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

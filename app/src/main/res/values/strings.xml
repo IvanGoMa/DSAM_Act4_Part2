@@ -7,5 +7,20 @@
     <string name="pes">Pes</string>
     <string name="edat">Edat</string>
     <string name="calcular">CALCULAR</string>
+    <string name="recalcular">RECALCULAR</string>
+    <string name="resultat">El teu resultat: </string>
+
+    <string name="resultatValor">20</string>
+
+    <string name="title_low">Pes baix</string>
+    <string name="title_medium">Pes normal</string>
+    <string name="title_high">Pes alt</string>
+    <string name="desc_low">Estàs per sota del pes ideal</string>
+    <string name="desc_medium">Estàs ideal!</string>
+    <string name="desc_high">Estàs per sobre del pes ideal</string>
+
+
+
+    <string name="error">Error</string>
 
 </resources>
